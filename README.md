@@ -6,7 +6,7 @@ These are a set of instructions on setting up basic resources and firewalls on D
     - for Linux install the AMD64 version
 2. Unzip downloaded folder
 3. Copy into your path
-  - Put in your bin directory ```cp <binary folder> ~/bin```
+    - Put in your bin directory ```cp <binary folder> ~/bin```
 4. Your .profile file should by default have a path to your bin directory
 5. Source this file ```source .profile```
 
@@ -14,8 +14,8 @@ These are a set of instructions on setting up basic resources and firewalls on D
 1. Create a project
 2. Create a Personal Access Token(PAT) and save it (under API)
 3. Create an SSH key (In DO located under Settings > Security
-  - Can be created using ```ssh-keygen```
-  - Put SSH key into .ssh
+        - Can be created using ```ssh-keygen```
+    - Put SSH key into .ssh
 
 ## Initial Setup
 1. Create working directory
@@ -33,7 +33,7 @@ These are a set of instructions on setting up basic resources and firewalls on D
 - Firewall
 
 ## Files Created
-- main.tf = providor info
+- main.tf = provider info
 - variables.tf = variables (i.e. region, API token, droplet count)
 - terraform.tfvars = variable values
 - output.tf = any output blocks (i.e. ip addresses)
@@ -47,15 +47,16 @@ These are a set of instructions on setting up basic resources and firewalls on D
 1. After creating main.tf run ```terraform init```
    this will setup your working directory with the files needed to work with your provider
 2. After creating all your files you can run the following commands
-  - ```terraform validate``` to check your syntax and structure
-  - ```terraform fmt``` to format your main.tf file
-  - ```terraform plan``` to show an overview of what you are making without actually creating the resources
-  - ```terraform apply``` to finally create your resources
+    - ```terraform validate``` to check your syntax and structure
+    - ```terraform fmt``` to format your main.tf file
+    - ```terraform plan``` to show an overview of what you are making without actually creating the resources
+    - ```terraform apply``` to finally create your resources
 
 ## Bastion Server
 1. SSH into Bastion server
-  - In your host run ```ssh-add <path to your key>```
-  - Can then connect to the Bastion server with ```ssh -A root@<Bastion IP>```
+    - In your host run ```ssh-add <path to your key>```
+    - Can then connect to the Bastion server with ```ssh -A root@<Bastion IP>```
+    ![Connect Bastion!](/images/ssh_connect.png "Connect Bastion")
 2. From the Bastion server you can connect to your other droplets ```ssh root@<web_ip>```
 
 ## Database
