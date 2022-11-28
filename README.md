@@ -73,3 +73,6 @@ These are a set of instructions on setting up basic resources and firewalls on D
 5. With the firewall up you will no longer be able to connect to the database  
 ![Cluster info!](/images/database_connection3.png "Details of Database")
 ![No Success!](/images/database_connection4.png "No Connect")
+
+
+Delete your project and resources after you are done with ```terraform destroy```
