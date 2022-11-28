@@ -32,3 +32,36 @@ These are a set of instructions on setting up basic resources and firewalls on D
 - MongoDB Database
 - Firewall
 
+## Files Created
+- main.tf = providor info
+- variables.tf = variables (i.e. region, API token, droplet count)
+- terraform.tfvars = variable values
+- output.tf = any output blocks (i.e. ip addresses)
+- database.tf = database creation and firewall
+- servers.tf = your droplets(web servers), load balancer and firewall
+- bastion.tf = bastion server and firewall
+- network.tf = vpc
+- data.tf = any data block (i.e. ssh key, project name)
+
+## Terraform
+1. After creating main.tf run ```terraform init```
+   this will setup your working directory with the files needed to work with your provider
+2. After creating all your files you can run the following commands
+  - ```terraform validate``` to check your syntax and structure
+  - ```terraform fmt``` to format your main.tf file
+  - ```terraform plan``` to show an overview of what you are making without actually creating the resources
+  - ```terraform apply``` to finally create your resources
+
+## Bastion Server
+1. SSH into Bastion server
+  - In your host run ```ssh-add <path to your key>```
+  - Can then connect to the Bastion server with ```ssh -A root@<Bastion IP>```
+2. From the Bastion server you can connect to your other droplets ```ssh root@<web_ip>```
+
+## Database
+1. Create the database first without the firewall (so you can check connection)
+2. In DO under Manage > Databases you should be able to see your mongo cluster and details on it
+3. Using CLI connect to the database
+![Cluster information!](/images/database_connection.png "Details of Database")
+4. After confirming connection, add the firewall and run ```terraform apply``` again to update it
+5. With the firewall up you will no longer be able to connect to the database
