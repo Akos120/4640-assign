@@ -51,6 +51,8 @@ These are a set of instructions on setting up basic resources and firewalls on D
     - ```terraform fmt``` to format your main.tf file
     - ```terraform plan``` to show an overview of what you are making without actually creating the resources
     - ```terraform apply``` to finally create your resources
+3. After you run ```terraform apply``` you should see the outputs you set in the output.tf file
+![output!](/images/output.png "output")
 
 ## Bastion Server
 1. SSH into Bastion server
