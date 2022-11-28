@@ -3,7 +3,7 @@ These are a set of instructions on setting up basic resources and firewalls on D
 
 ## Installing Terraform
 1. Install using the binary from: https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
-  - for Linux install the AMD64 version
+    - for Linux install the AMD64 version
 2. Unzip downloaded folder
 3. Copy into your path
   - Put in your bin directory ```cp <binary folder> ~/bin```
