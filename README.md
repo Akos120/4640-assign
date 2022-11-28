@@ -58,6 +58,7 @@ These are a set of instructions on setting up basic resources and firewalls on D
     - Can then connect to the Bastion server with ```ssh -A root@<Bastion IP>```
     ![Connect Bastion!](/images/ssh_connect.png "Connect Bastion")
 2. From the Bastion server you can connect to your other droplets ```ssh root@<web_ip>```
+![Connect Internal!](/images/ssh_connect2.png "Connect Internal")
 
 ## Database
 1. Create the database first without the firewall (so you can check connection)
