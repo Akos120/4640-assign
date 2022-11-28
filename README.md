@@ -62,6 +62,10 @@ These are a set of instructions on setting up basic resources and firewalls on D
 1. Create the database first without the firewall (so you can check connection)
 2. In DO under Manage > Databases you should be able to see your mongo cluster and details on it
 3. Using CLI connect to the database
-![Cluster information!](/images/database_connection.png "Details of Database")
+![Cluster information!](/images/database_connection2.png "Details of Database")
+![Successful Connection!](/images/database_connection.png "Connection Success")
+
 4. After confirming connection, add the firewall and run ```terraform apply``` again to update it
 5. With the firewall up you will no longer be able to connect to the database
+![Cluster information!](/images/database_connection.png3 "Details of Database")
+![No Success!](/images/database_connection.png4 "No Connect")
